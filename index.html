@@ -1,22 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8"/>
-	<link rel="stylesheet" href="Styles/indexdesign.css"/>
-	<script src="JS files/index.js"></script>
-	<script src="JS files/audiocontrols.js"></script>	
+<!doctype html><html><head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="Styles/indexdesign.css">
+	
+		
 </head>
-<body onload="f()">
+<body>
 	
 	<audio loop autoplay>
-		<source src="Sound_Tracks/bg.wav" type="audio/mpeg"/>
+		<source src="Sound_Tracks/bg.wav" type="audio/mpeg">
 	</audio>
 	<audio id="hover">
-		<source src="Sound_Tracks/hover.ogg" type="audio/mpeg"/>
+		<source src="Sound_Tracks/hover.ogg" type="audio/mpeg">
 	</audio>
 	
-	<div class="indexheader">
-	<div class="box">
+	<div class="indexheader" id="H A N G M A N">
+	<div class="box" id="H A N G M A N">
 	<div class="dis" id="H">H</div>
 	<div class="dis" id="A">A</div>
 	<div class="dis" id="N">N</div>
@@ -28,15 +26,15 @@
 		<div class="empty"></div>
 		<div id="line"></div>
 	</div>
-	<div class="sidemenu">
-	<a href="hangman.html"><div id="newgame" onMouseOver="playhover()">New Game</div></a>
-	<div id="quitgame" onMouseOver="playhover()" onclick="window.close()">Quit</div>
+	<div class="sidemenu" id="New Game Quit">
+	<a href="hangman.html" id="New Game"><div id="newgame">New Game</div></a>
+	<div id="quitgame">Quit</div>
 	</div>
 	<article>
 	<div id="rulesheet">
 		<h1>RULES</h1>
-		<p>A very good friend of yours is about to be Hanged. But you can save him!<br/>How?<br/>
-			You will be given a hidden word. Only the number of letters will be visible. The word is the name of a fictional character! All you need to do is to guess the word correctly within time.<br/>
+		<p>A very good friend of yours is about to be Hanged. But you can save him!<br>How?<br>
+			You will be given a hidden word. Only the number of letters will be visible. The word is the name of a fictional character! All you need to do is to guess the word correctly within time.<br>
 			You need to guess all the words to save your friend from getting hanged. You can take limited hints in the whole game.
 			For each word, you get 6 chances of guessing a wrong letter.
 		</p>
@@ -44,7 +42,7 @@
 	</article>
 	<div class="empty"></div>
 		<footer>
-			<div>&copy; Aurobindo Debnath</div>
+			<div>? Aurobindo Debnath</div>
 		</footer>
-</body>
-</html>
+
+<script src="index.js"></script></body></html>
