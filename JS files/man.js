@@ -1,7 +1,11 @@
 
+import { index } from ".\\logic.js";
+import { picsel } from ".\\logic.js";
+import { pauseclockrotation } from ".\\stopwatch.js";
+import { lost } from ".\\logic.js";
+
 //When a new word is prompted, this function resets all animations and visibilities of the man object
-function resetman()
-{
+export function resetman() {
 	document.getElementById("body").style.visibility="hidden";
 	document.getElementById("body").style.animation="none";
 	document.getElementById("leg1").style.visibility="hidden";
@@ -17,8 +21,7 @@ function resetman()
 }
 
 //In case a wrong letter is guessed this function makes the corresponding changes in the man object
-function maneffect(q)
-{
+export function maneffect(q) {
 	switch(picsel)
 		{
 			case 1:

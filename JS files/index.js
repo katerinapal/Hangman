@@ -1,24 +1,20 @@
 
 //variable used to select the cases in the switch statement
-var t=0;
-
+export var t=0;
 
 //when the quit button is pressed
-function closewindow()
-{
+export function closewindow() {
 	window.close();
 }
 
 //The rule sheet appears with this animation
-function rulesheetvisible()
-{
+export function rulesheetvisible() {
 	document.getElementById("rulesheet").style.animation="2s sheetslide 1 ease";
 	document.getElementById("rulesheet").style.visibility="visible";
 }
 
 //The animation of each letter of Hangman is controlled using this function
-function f()
-{
+export function f() {
 	t++;
 	switch(t)
 	{

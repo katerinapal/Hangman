@@ -1,4 +1,11 @@
-var attributes = document.getElementsByTagName('body');
+import { starttimer } from ".\\JS files\\stopwatch.js";
+import { main } from ".\\JS files\\logic.js";
+import { selectword } from ".\\JS files\\logic.js";
+import { player } from ".\\JS files\\logic.js";
+import { givehint } from ".\\JS files\\hint.js";
+import { shownoofhints } from ".\\JS files\\hint.js";
+import { playhover } from ".\\JS files\\audiocontrols.js";
+export var attributes = document.getElementsByTagName('body');
 for(var i = 0; i < attributes.length; i++) {
 attributes[i].onload = function() {
 	player(),shownoofhints(),selectword(),starttimer();

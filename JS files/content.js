@@ -1,15 +1,19 @@
 //To change the number of hints available
-var hintsleft=7;
+export var hintsleft=7;
+
+export function modificationFunc0() {
+    hintsleft--;
+}
 
 //To change the clock time, just change the value of this variable
-var settime=60;
+export var settime=60;
 
 //This Array contains all the words
-var allwords= new Array('SUPERMAN','BATMAN', 'SPIDERMAN', 'IRONMAN', 'JOKER','CATWOMAN','WOLVERINE','THOR','WONDERWOMAN','AQUAMAN','HERCULES','HULK','FLASH','DEADPOOL',
+export var allwords= new Array('SUPERMAN','BATMAN', 'SPIDERMAN', 'IRONMAN', 'JOKER','CATWOMAN','WOLVERINE','THOR','WONDERWOMAN','AQUAMAN','HERCULES','HULK','FLASH','DEADPOOL',
 					   'HAWKMAN','ZATANNA','STARFIRE','VIXEN','RAVEN','ORION');
 
 //An associative array of words alongwith hints
-var dict={
+export var dict={
     "SUPERMAN":"He was sent to earth when born because his technologically advanced world was on the verge of destruction",
 	"BATMAN":"\"It's not who I am underneath, but what I do that defines me\"",
 	"SPIDERMAN":"He was a normal human until a radioactive insect bit him!",
@@ -30,4 +34,4 @@ var dict={
 	"VIXEN":"She can mimic the ability of any animal that has ever lived on Earth",
 	"RAVEN":"An Empath",
 	"ORION":"The Dog of War"
-} 
+}; 
