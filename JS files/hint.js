@@ -1,3 +1,8 @@
+import { dict } from ".\\content.js";
+import { content_hintsleft_modificationFunc_0 } from ".\\content.js";
+import { hintsleft } from ".\\content.js";
+import { index } from ".\\logic.js";
+import { selword } from ".\\logic.js";
 /*hintbutton and hinttext should not be made visible simultaneously.
 There must be switching between both of them. When one is visible, the other one is made invisible
 I'll call this 'countereffect'
@@ -9,8 +14,7 @@ var string2=" Hint Left";
 var string3="No Hint Left";
 
 //This function is responsible for showing the number of hints in the HTML
-function shownoofhints()
-{
+export function shownoofhints() {
 		if(hintsleft==1)
 		{	document.getElementById("noofhints").innerHTML=hintsleft+string2;//just for gramatical reasons
 		}
@@ -21,9 +25,8 @@ function shownoofhints()
 }
 
 //executed when the hint button is pressed
-function givehint()
-{
-	hintsleft--;
+export function givehint() {
+	content_hintsleft_modificationFunc_0();
 	if(hintsleft>0)
 	{
 		shownoofhints();
@@ -36,8 +39,7 @@ function givehint()
 }
 
 //this function ensures countereffect. When the next word is loaded, the hintbutton is made visible and hinttext invisible
-function showhintbutton()
-{
+export function showhintbutton() {
 	if(hintsleft!=0)
 	{
 		document.getElementById("hinttext").innerHTML=dict[selword[index]];
@@ -49,7 +51,8 @@ function showhintbutton()
 		hideallhint();
 	}
 }
-function hideallhint(){
+
+export function hideallhint() {
 		//when all the hints are utilized, both hintbutton and hinttext are made invisible
 		document.getElementById("hinttext").style.visibility="hidden";
 		document.getElementById("hinttext").innerHTML=dict[selword[index]];
