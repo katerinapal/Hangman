@@ -1,3 +1,7 @@
+import { settime } from ".\\content.js";
+import { index } from ".\\logic.js";
+import { playticktok } from ".\\audiocontrols.js";
+import { lost } from ".\\logic.js";
 //bug: the dot 
 
 //this variable decreases its value during recursive calls
@@ -7,30 +11,25 @@ var time=settime;
 var working=true;
 
 //In case of correct answer, this function resets the clock
-function resettime()
-{
+export function resettime() {
 	time=settime;
 	document.getElementById("clockcase").style.animation="60s spinnow infinite linear";
 	document.getElementById("clock").style.animation="60s negspin infinite linear";
 }
 
-function pauseclock()
-{
+export function pauseclock() {
 	working=false;
 	time++;//this is done to fix a bug
 }
 
 //For the time being alert boxes are shown, the clock rotation is paused
-function pauseclockrotation()
-{
+export function pauseclockrotation() {
     document.getElementById("clockcase").style.animation="none";
 	document.getElementById("clock").style.animation="none";
 }
 
-
 //This function is called recursively to display seconds on the html page
-function starttimer()
-{
+export function starttimer() {
 	document.getElementById("clock").innerHTML=time;
 	time--;
 	if(working)
