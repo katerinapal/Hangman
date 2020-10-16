@@ -17,8 +17,7 @@ function rulesheetvisible()
 }
 
 //The animation of each letter of Hangman is controlled using this function
-function f()
-{
+export function f() {
 	t++;
 	switch(t)
 	{
