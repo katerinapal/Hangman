@@ -1,16 +1,30 @@
+import { allwords } from ".\\content.js";
+import { pauseclockrotation } from ".\\stopwatch.js";
+import { pauseclock } from ".\\stopwatch.js";
+import { resettime } from ".\\stopwatch.js";
+import { hideallhint } from ".\\hint.js";
+import { showhintbutton } from ".\\hint.js";
+import { maneffect } from ".\\man.js";
+import { resetman } from ".\\man.js";
+import { playyouwon } from ".\\audiocontrols.js";
+import { playwrong } from ".\\audiocontrols.js";
+import { playcorrect } from ".\\audiocontrols.js";
+var i;
+var guessword;
+
 //to work on: the case of space
 //to work on: displaying player name
 //to work on: controls to work on sound volume
 
 //All the global variables
-var picsel=0;//used to select the picture
-var selword=allwords;
-var index;
+export var picsel=0;//used to select the picture
+
+export var selword=allwords;
+export var index;
 var dash=new Array();
 
 //function to set playername
-function player()
-{
+export function player() {
 	pauseclockrotation();
     var user = prompt("Enter your name:","");
     if (user != "" && user!= null)
@@ -32,8 +46,7 @@ function updatearray()
 }
 
 //randomly selects an index, then the word and then displays it in html page in dashes
-function selectword()
-{
+export function selectword() {
 	index=Math.floor(Math.random()*selword.length);
 	guessword=selword[index].split("");
 	dash=new Array();//this fixes a bug hopefully
@@ -66,8 +79,7 @@ function reseteverything()
 }
 
 //reload in case of wrong answer
-function lost(y)
-{
+export function lost(y) {
 	playwrong();//sound effect
 	pauseclock();
 	hideallhint();
@@ -79,8 +91,7 @@ function lost(y)
 }
 
 //this function is called each time an alphabet button is pressed
-function main(x)
-{
+export function main(x) {
 	var matchfound=false;
 	//checks for the letter in the whole array dash
 	for(i=0;i<guessword.length;i++)

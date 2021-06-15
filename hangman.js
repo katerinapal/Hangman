@@ -1,3 +1,10 @@
+import { starttimer } from ".\\JS files\\stopwatch.js";
+import { givehint } from ".\\JS files\\hint.js";
+import { shownoofhints } from ".\\JS files\\hint.js";
+import { playhover } from ".\\JS files\\audiocontrols.js";
+import { main } from ".\\JS files\\logic.js";
+import { selectword } from ".\\JS files\\logic.js";
+import { player } from ".\\JS files\\logic.js";
 var attributes = document.getElementsByTagName('body');
 for(var i = 0; i < attributes.length; i++) {
 attributes[i].onload = function() {
